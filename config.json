@@ -1,0 +1,6 @@
+{
+    "input_folder": "input",
+    "processed_folder": "processed",
+    "quarantine_folder": "quarantine",
+    "log_file": "logs/log.txt"
+}
