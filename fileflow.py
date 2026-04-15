@@ -23,13 +23,13 @@ def write_log(message):
     with open(LOG_FILE, "a") as log_file:
         log_file.write(f"{timestamp} - {message}\n")
 
-
+#main function to process files
 def process_files():
-    files = os.listdir(INPUT_FOLDER)
-
+    files = os.listdir(INPUT_FOLDER) #make a list of input files
+    #counters for the summary log
     processed_count = 0
     quarantined_count = 0 
-
+    #loop through all files in the input folder
     for filename in files:
         file_path = os.path.join(INPUT_FOLDER, filename)
         #skip processed files
