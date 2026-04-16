@@ -1,5 +1,0 @@
-2026-04-15 13:29:35 - processed: data_test.csv
-2026-04-15 13:29:35 - Quarantined: quarantine_2.zip
-2026-04-15 13:29:35 - Quarantined: quarantine_test1.exe
-2026-04-15 13:29:35 - processed: test1.json
-2026-04-15 13:29:35 - processed: test1.txt
