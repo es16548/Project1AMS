@@ -1,6 +1,18 @@
 {
-    "input_folder": "input",
-    "processed_folder": "processed",
-    "quarantine_folder": "quarantine",
-    "log_file": "logs/log.txt"
+    "valid_extensions" : {
+        ".txt" : "text",
+        ".csv" : "data",
+        ".json" : "data"
+    },
+
+    "folders" :{
+        "input": "input",
+        "processed": "processed",
+        "quarantine": "quarantine",
+        "archive": "archive",
+        "reports": "reports",
+        "logs": "logs"
+    },
+    "log_file": "logs/log.txt",
+    "archive_days": 30
 }
