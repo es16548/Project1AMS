@@ -4,24 +4,51 @@
 import os
 import shutil
 import json
+import uuid
 from datetime import datetime
 
 # reading the config.json so it knows where to move the files
 with open("config.json", "r") as f:
     config = json.load(f)
 #constant variables 
-INPUT_FOLDER = config["input_folder"]
-PROCESSED_FOLDER = config["processed_folder"]
-QUARANTINE_FOLDER = config["quarantine_folder"]
+INPUT_FOLDER = config["folders"]["input"]
+PROCESSED_FOLDER = config["folders"]["processed"]
+QUARANTINE_FOLDER = config["folders"]["quarantine"]
 LOG_FILE = config["log_file"]
 
-VALID_EXTENSIONS = [".txt", ".csv", ".json"]
+VALID_EXTENSIONS = list(config["valid_extensions"].keys())
+
+#create missing folders if they don't exist
+for folder in config["folders"].values():
+    os.makedirs(folder, exist_ok=True)
 
 # function to write logs to the log file
 def write_log(message):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(LOG_FILE, "a") as log_file:
         log_file.write(f"{timestamp} - {message}\n")
+
+
+
+#sorting to subfolders
+def get_destination_folder(filename):
+    ext = os.path.splitext(filename)[1].lower()
+    if ext in config["valid_extensions"]:
+        category = config["valid_extensions"][ext]  
+        return os.path.join(PROCESSED_FOLDER, category)
+    else:
+        return QUARANTINE_FOLDER
+    
+for category in set(config["valid_extensions"].values()):
+    os.makedirs(os.path.join(PROCESSED_FOLDER, category), exist_ok=True)
+
+#protection for duplicate files
+def safe_move(src, dest):
+    base, ext = os.path.splitext(dest)
+    if os.path.exists(dest):
+        dest = f"{base}_{uuid.uuid4().hex[:6]}{ext}"
+    shutil.move(src, dest)
+ 
 
 #main function to process files
 def process_files():
@@ -37,16 +64,19 @@ def process_files():
             continue
 
         #check for valid file extensions
+        dest_folder=get_destination_folder(filename)
+        os.makedirs(dest_folder, exist_ok=True)
+        dest_path = os.path.join(dest_folder, filename)
+
         _, ext = os.path.splitext(filename)
+
         if ext.lower() in VALID_EXTENSIONS:
-            dest = os.path.join(PROCESSED_FOLDER, filename)
-            shutil.move(file_path, dest)
+            safe_move(file_path, dest_path)
             write_log(f"processed: {filename}")
             processed_count += 1
 
         else:
-            dest = os.path.join(QUARANTINE_FOLDER, filename)
-            shutil.move(file_path, dest)
+            safe_move(file_path, dest_path)
             write_log(f"Quarantined: {filename}")
             quarantined_count += 1
 
