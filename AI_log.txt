@@ -1,7 +1,8 @@
 # AI Usage Log – FileFlow Project
 
 Purpose of AI Use:  
-AI was used as a support tool to assist with planning, debugging, documentation, and environment setup. All final decisions, code changes, and testing were performed by me.
+AI was used as a support tool to assist with planning, debugging, documentation, 
+and environment setup. All final decisions, code changes, and testing were performed by me.
 
 1. Planning & Requirements
 Generated backlog items for the FileFlow system
