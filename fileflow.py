@@ -165,12 +165,40 @@ def process_files():
     archive_old_files(archived_files_list)
     generate_report(processed_files_list, quarantined_files_list, archived_files_list)
 
+def show_menu():
+    print("\n=== FileFlow Menu ===")
+    print("1. Process files")
+    print("2. Generate report")
+    print("3. View logs")
+    print("4. Exit")
+
+    choice = input("Choose an option: ").strip()
+    return choice
+
+#add a menu
+def run_menu():
+    while True:
+        choice = show_menu()
+
+        if choice == "1":
+            process_files()
+        elif choice == "2":
+            generate_report()
+        elif choice == "3":
+            print(f"\n--- Log file: {LOG_FILE} ---\n")
+            with open(LOG_FILE, "r") as f:
+                print(f.read())
+        elif choice == "4":
+            print("Goodbye.")
+            break
+        else:
+            print("Invalid choice. Try again.")
 
 
 
 #running script 
 if __name__ == "__main__":
-    process_files()
+    run_menu()
 
        
           

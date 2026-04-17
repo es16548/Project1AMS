@@ -1,0 +1,41 @@
+[2026-04-17 11:21:40] - INFO processed file: data1.csv
+[2026-04-17 11:21:40] - INFO processed file: data2.csv
+[2026-04-17 11:21:40] - INFO processed file: data3.csv
+[2026-04-17 11:21:40] - WARNING Quarantined: inval.exe
+[2026-04-17 11:21:40] - WARNING Quarantined: inval2.jpg
+[2026-04-17 11:21:40] - WARNING Quarantined: inval3.pdf
+[2026-04-17 11:21:40] - INFO processed file: test1j.json
+[2026-04-17 11:21:40] - INFO processed file: test2j.json
+[2026-04-17 11:21:40] - INFO processed file: test3.txt
+[2026-04-17 11:21:40] - INFO processed file: test4.txt
+[2026-04-17 11:21:40] - INFO Generated report: report_2026-04-17_11-21-40.txt
+[2026-04-17 11:38:06] - ARCHIVE Archived: old1.csv
+[2026-04-17 11:38:06] - ARCHIVE Archived: old2.csv
+[2026-04-17 11:38:06] - ARCHIVE Archived: old1.txt
+[2026-04-17 11:38:06] - ARCHIVE Archived: old2.txt
+[2026-04-17 11:38:06] - INFO Generated report: report_2026-04-17_11-38-06.txt
+[2026-04-17 13:00:07] - ARCHIVE Archived: ddata1.csv
+[2026-04-17 13:00:07] - ARCHIVE Archived: ddata2.csv
+[2026-04-17 13:00:07] - ARCHIVE Archived: ddata3.csv
+[2026-04-17 13:00:07] - ARCHIVE Archived: dtest1.txt
+[2026-04-17 13:00:07] - ARCHIVE Archived: dtest2.txt
+[2026-04-17 13:00:07] - ARCHIVE Archived: dtest3.txt
+[2026-04-17 13:00:07] - INFO Generated report: report_2026-04-17_13-00-07.txt
+[2026-04-17 13:07:15] - INFO processed file: dest3.csv
+[2026-04-17 13:07:15] - INFO processed file: dtest1.csv
+[2026-04-17 13:07:15] - WARNING Quarantined: dtest10.ufo
+[2026-04-17 13:07:15] - INFO processed file: dtest2.csv
+[2026-04-17 13:07:15] - INFO processed file: dtest3.txt
+[2026-04-17 13:07:15] - INFO processed file: dtest4.csv
+[2026-04-17 13:07:15] - INFO processed file: dtest5.txt
+[2026-04-17 13:07:15] - INFO processed file: dtest6.json
+[2026-04-17 13:07:15] - WARNING Quarantined: dtest7.ymca
+[2026-04-17 13:07:15] - WARNING Quarantined: dtest8.yzx
+[2026-04-17 13:07:15] - WARNING Quarantined: dtest9.pdf
+[2026-04-17 13:07:15] - ARCHIVE Archived: ddata1.csv
+[2026-04-17 13:07:15] - ARCHIVE Archived: ddata2.csv
+[2026-04-17 13:07:15] - ARCHIVE Archived: ddata3.csv
+[2026-04-17 13:07:15] - ARCHIVE Archived: dtest1.txt
+[2026-04-17 13:07:15] - ARCHIVE Archived: dtest2.txt
+[2026-04-17 13:07:15] - ARCHIVE Archived: dtest3.txt
+[2026-04-17 13:07:15] - INFO Generated report: report_2026-04-17_13-07-15.txt

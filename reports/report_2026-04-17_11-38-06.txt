@@ -1,0 +1,16 @@
+FileFlow Report - 2026-04-17_11-38-06
+========================================
+
+Processed files: 0
+Quarantined files: 0
+Archived files: 4
+
+Processed Files:
+
+Quarantined Files:
+
+Archived Files:
+- old1.csv
+- old2.csv
+- old1.txt
+- old2.txt
