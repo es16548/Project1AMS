@@ -1,0 +1,27 @@
+# AI Usage Log – FileFlow Project
+
+Purpose of AI Use:  
+AI was used as a support tool to assist with planning, debugging, documentation, and environment setup. All final decisions, code changes, and testing were performed by me.
+
+1. Planning & Requirements
+Generated backlog items for the FileFlow system
+Created acceptance criteria for file processing, quarantine rules, and archiving
+
+2. Code Support
+Assisted with explaining Python errors and suggesting corrections
+Helped structure the run_menu() function and main program flow
+Provided examples of logging formats and report output structure
+Suggested improvements for config handling and readability
+
+3. Environment Setup
+Guided me through:
+Initialising Git and pushing to GitHub
+Writing the Dockerfile
+Running the container with volume mounts
+
+4. Testing & Troubleshooting
+Helped diagnose missing folders in VS Code
+Helped interpret the report and log outputs
+
+5. Documentation & Evidence
+Assisted in writing the README structure
