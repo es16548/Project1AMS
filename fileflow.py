@@ -10,6 +10,29 @@ from datetime import datetime
 # reading the config.json so it knows where to move the files
 with open("config.json", "r") as f:
     config = json.load(f)
+
+#Error handling for config file
+required_sections = ["folders", "valid_extensions", "log_file"]
+
+for section in required_sections:
+    if section not in config:
+        print(f"Config error: Missing '{section}' in config.json")
+        exit(1)
+
+# Validate folders section
+required_folders = ["input", "processed", "quarantine", "archive", "reports", "logs"]
+for folder in required_folders:
+    if folder not in config["folders"]:
+        print(f"Config error: Missing folder path for '{folder}' in config.json")
+        exit(1)
+
+# Validate archive_days
+if not isinstance(config.get("archive_days", 30), int):
+    print("Config warning: 'archive_days' is invalid. Using default of 30.")
+    config["archive_days"] = 30
+
+
+
 #constant variables 
 INPUT_FOLDER = config["folders"]["input"]
 PROCESSED_FOLDER = config["folders"]["processed"]
